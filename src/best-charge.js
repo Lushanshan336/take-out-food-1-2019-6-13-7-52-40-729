@@ -20,7 +20,14 @@ function getBuyedItems(inputs){    //15min
   return buyedItems;
 }
 
-
+function isInPromotion(itemId){    //5min
+  let halfIds = promotions[1].items;
+  for(let i=0;i<halfIds.length;i++){
+    if(halfIds[i]==itemId)
+      return true;
+  }
+  return false;
+}
 
 
 function bestCharge(selectedItems) {
